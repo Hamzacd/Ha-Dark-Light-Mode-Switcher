@@ -1,0 +1,59 @@
+/* style.css */
+.toggle-container {
+    position: relative;
+    width: 80px;
+    height: 40px;
+    background-color: #222;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-container.light {
+    background-color: #ff8c42;
+}
+
+.toggle-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 0.3s, left 0.3s;
+}
+
+.toggle-icon.sun {
+    left: 12px;
+    opacity: 0;
+    background-image: url('./icons/sun.png');
+    background-size: cover;
+}
+
+.toggle-icon.moon {
+    left: 45px;
+    background-image: url('./icons/moon.png');
+    background-size: cover;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 34px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s;
+}
+
+.toggle-container.light .toggle-btn {
+    left: 43px;
+}
+
+.toggle-container.light .toggle-icon.sun {
+    opacity: 1;
+}
+
+.toggle-container.light .toggle-icon.moon {
+    opacity: 0;
+}
